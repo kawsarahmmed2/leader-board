@@ -1,0 +1,163 @@
+
+
+/* common css */
+body{
+    background-color: #f3f1ff;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color:#FFFFFF;
+    width: 870px;
+    padding: 30px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+hr{
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
+}
+/* top players */
+.top-players{
+    margin-bottom: 30px;
+}
+.section-title{
+    font-size: 24px;
+    color: #562eff;
+    margin-top: 3px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  
+    grid-row-gap: 30px; 
+}
+.player{
+   display: flex;
+   align-items:center; 
+}
+
+.player img{
+    width: 56px;
+    height: 56px;
+}
+.player-name{
+    margin-left: 16px;
+    font-size: 18px;
+}
+/* top blogs */
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 26px;
+}
+.blog{
+    display: flex;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-author{
+    color: #9f9f9f;
+    font-size: 16px;
+}
+.blog-author a{
+    text-decoration: none;
+    color: #562EFF;
+    font-size: 16px;
+}
+/* courses */
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+   
+}
+.course{
+    width: 250px;
+    height: 270px;
+    background-image: linear-gradient(lightgray,gray);
+    border-radius: 10px;
+    padding: 10px ;
+    padding-left: 30px;
+    padding-right: 0;
+ 
+}
+
+.course .course-banner img{
+    width: 224px;
+    height: 104px;    
+}
+
+.course-detail{
+    padding: 20px;   
+}
+
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-author{
+    color:orangered;
+    font-weight: 800px;
+    font-size: 20px;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+
+/* --------------------
+Media Queries
+
+------------------------ */
+/* Mobile device */
+
+@media only screen and (max-width:638px) {    
+    .container{
+        width: 100%;
+    }
+        
+    .players , .blogs ,.courses{
+        /* background-color: red; */
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player ,.blog{
+        flex-direction: column;
+    }
+    
+}
+
+/* tablets */
+@media only screen and (min-width:638px)  (max-width:992px){    
+        .container{
+            width: 100%;
+        }
+            
+        .players , {
+            /* background-color: red; */
+            grid-template-columns: repeat(2,1fr);
+        }
+        .blogs ,.courses{
+            grid-template-columns: repeat(1,1fr);
+        }
+        .player ,.blog{
+            flex-direction: column;
+    }
+    
